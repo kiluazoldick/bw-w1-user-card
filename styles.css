@@ -1,0 +1,123 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+html {
+  --s: 118px; /* control the size*/
+  --c1: #b2b2b2;
+  --c2: #ffffff;
+  --c3: #d9d9d9;
+
+  --_g: var(--c3) 0 120deg, #0000 0;
+  background: conic-gradient(from -60deg at 50% calc(100% / 3), var(--_g)),
+    conic-gradient(from 120deg at 50% calc(200% / 3), var(--_g)),
+    conic-gradient(
+      from 60deg at calc(200% / 3),
+      var(--c3) 60deg,
+      var(--c2) 0 120deg,
+      #0000 0
+    ),
+    conic-gradient(from 180deg at calc(100% / 3), var(--c1) 60deg, var(--_g)),
+    linear-gradient(
+      90deg,
+      var(--c1) calc(100% / 6),
+      var(--c2) 0 50%,
+      var(--c1) 0 calc(500% / 6),
+      var(--c2) 0
+    );
+  background-size: calc(1.732 * var(--s)) var(--s);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.card {
+  max-width: 350px;
+  width: 100%;
+  border: 1px solid hsl(0%, 0%, 40%);
+  border-radius: 24px;
+  box-shadow: 0 4px 12px hsl(0deg 0% 63% / 0.8),
+    4px 8px 12px hsl(0deg 0% 63% / 0.5);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-pattern {
+  height: 120px;
+  object-fit: cover;
+}
+
+.card-user {
+  background: white;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.card-user-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 999px;
+  border: 4px solid white;
+  margin-top: calc((32px + 96px / 2) * -1);
+}
+
+.card-user-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.card-user-location {
+  font-size: 0.8rem;
+  color: hsl(0, 0%, 50%);
+}
+
+.card-user-age {
+  color: hsl(0, 0%, 50%);
+  font-weight: 300;
+  padding-left: 12px;
+}
+
+.card-stats {
+  background: white;
+  display: flex;
+  gap: 16px;
+  border-top: 1px solid hsl(0, 0%, 80%);
+  padding: 24px;
+}
+
+.card-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.card-stat-value {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.card-stat-label {
+  font-size: 0.8rem;
+  color: hsl(0, 0%, 50%);
+}
