@@ -33,7 +33,7 @@ html {
     linear-gradient(
       90deg,
       var(--c1) calc(100% / 6),
-      var(--c2) 0 50%,
+      var(--c2) 0 70%,
       var(--c1) 0 calc(500% / 6),
       var(--c2) 0
     );
